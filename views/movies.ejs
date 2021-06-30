@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies app</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <h1 id="searchHeading">Search results <span> > </span> <%= searchHeading.toUpperCase() %></h1>
+
+    
+   <% data['results'].forEach((movie)=>{ %>
+    <div class="card mb-5 w-75" >
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src='https://image.tmdb.org/t/p/w500/<%= movie["poster_path"] %>' class="card-img img-fluid" alt="">
+            </div>
+
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 class="card-title"><%= movie["original_title"] %></h2>
+                    <hr>
+                    <p class="card-text"><%= movie["overview"] %></p>
+                    <hr>
+                    <br>
+                    <p class="card-text"><b>Date published:</b> <%= movie["release_date"] %></p>
+                    <p class="card-text"><b>Total Votes:</b> <%= movie["vote_count"] %></p>
+                    <p class="card-text"><b>Average Rating:</b> <%= movie["vote_average"] %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+
+
+
+
+
+
+
+
+
+
+
+   
+</body>
+</html>

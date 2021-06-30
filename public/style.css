@@ -1,0 +1,16 @@
+.card-title {
+    font-family: Lato;
+}
+.card{
+    margin-left: 12.5%;
+}
+.card-img {
+    height: 24rem;
+}
+#searchHeading{
+    margin-left: 12.5%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
